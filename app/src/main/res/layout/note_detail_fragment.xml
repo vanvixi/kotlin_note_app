@@ -1,0 +1,106 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        >
+
+    <!-- Appbar -->
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/toolbar"
+                android:background="@color/white"
+                app:titleTextAppearance="@style/ToolbarTitleTextAppearance"
+                app:contentInsetEndWithActions="@dimen/cardview_compat_inset_shadow"
+                >
+
+            <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="16dp"
+                    android:id="@+id/btnBack"
+                    android:background="@drawable/appbar_action_btn_bgr"
+                    android:src="@drawable/ic_back_arrow"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/share"
+                    />
+
+            <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:id="@+id/btnShare"
+                    android:background="@drawable/appbar_action_btn_bgr"
+                    android:src="@drawable/ic_share"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/share"
+                    />
+
+            <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:id="@+id/btnDelete"
+                    android:background="@drawable/appbar_action_btn_bgr"
+                    android:src="@drawable/ic_delete"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/delete"
+                    />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Body -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="68dp"
+            android:layout_marginHorizontal="32dp">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:id="@+id/txtTitle"
+                android:textColor="@color/black2"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:id="@+id/txtCreateAt"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                />
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12dp"
+                    android:id="@+id/txtContent"
+                    android:textColor="@color/grey2"
+                    android:textSize="16sp"
+                    />
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

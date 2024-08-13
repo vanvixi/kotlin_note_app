@@ -1,0 +1,123 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        >
+
+    <!-- Appbar -->
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/toolbar"
+                android:background="@color/white"
+                app:titleTextAppearance="@style/ToolbarTitleTextAppearance"
+                app:contentInsetEndWithActions="@dimen/cardview_compat_inset_shadow"
+                >
+
+            <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="16dp"
+                    android:id="@+id/btnBack"
+                    android:background="@drawable/appbar_action_btn_bgr"
+                    android:src="@drawable/ic_back_arrow"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/back"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/toolbar_title"
+                    android:text="@string/add_notes"
+                    android:textColor="@color/black2"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Body -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="68dp"
+            android:layout_marginHorizontal="32dp"
+            >
+        <!-- Title Input Field -->
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/MyTextInputLayoutStyle"
+                app:boxBackgroundMode="filled"
+                app:boxBackgroundColor="@android:color/white"
+                android:hint="@string/title"
+                app:hintTextAppearance="@style/AddNoteTitleHintTextAppearance"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/titleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Content Input Field -->
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/contentInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                style="@style/MyTextInputLayoutStyle"
+                app:boxBackgroundMode="filled"
+                app:boxBackgroundColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@id/titleInputLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/your_notes_here"
+                    app:hintTextAppearance="@style/AddNoteTitleHintTextAppearance"
+                    app:expandedHintEnabled="false"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="48dp"
+            android:layout_gravity="end|bottom"
+            android:contentDescription="@string/save"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_check"
+            app:iconTint="@color/white"
+            app:backgroundTint="@color/primary"
+            />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

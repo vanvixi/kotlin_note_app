@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">NoteApp</string>
+    <string name="welcome_back">Welcome\nback</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="do_not_have_an_account">"Don’t have an account? "</string>
+    <string name="sign_up">Sign up</string>
+    <string name="create_account">Create account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account">"Already have an account? "</string>
+    <string name="sign_in">Sign in</string>
+    <string name="back">back</string>
+    <string name="all_notes">All Notes</string>
+    <string name="add">Add</string>
+    <string name="lightbulb">lightbulb</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="add_notes">Add notes</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="your_notes_here">Your notes here...</string>
+
+</resources>

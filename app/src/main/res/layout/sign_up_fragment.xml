@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="24dp"
+        >
+
+
+    <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:id="@+id/btnBack"
+            android:background="@drawable/appbar_action_btn_bgr"
+            android:src="@drawable/ic_back_arrow"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/back"
+           />
+
+    <TextView
+
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/create_account"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            />
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:id="@+id/editTextUsername"
+            android:inputType="text"
+            android:hint="@string/username"
+            android:autofillHints="username"
+            />
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextPassword"
+            android:inputType="textVisiblePassword"
+            android:hint="@string/password"
+            android:layout_marginTop="24dp"
+            android:autofillHints="password"
+            />
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextConfirmPassword"
+            android:inputType="textVisiblePassword"
+            android:hint="@string/confirm_password"
+            android:layout_marginTop="24dp"
+            android:autofillHints="password"
+            />
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:id="@+id/btnCreateAcc"
+            android:background="@drawable/primary_btn_bgr"
+            android:text="@string/create_account"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            />
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+        <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/already_have_an_account"
+                android:textSize="16sp"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtHintSignIn"
+                android:text="@string/sign_in"
+                android:textSize="16sp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                />
+    </LinearLayout>
+
+</LinearLayout>
